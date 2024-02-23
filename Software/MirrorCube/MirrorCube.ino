@@ -202,8 +202,11 @@ bool checkPoint() {
     Serial.print("Das aktuelle Programm ist nun ");
     Serial.println(currentProgram);
     fill_solid(leds, NUM_LEDS, CRGB(255, 255, 255));
+    FastLED.show();
     delay(buttonDebounce);
     fill_solid(leds, NUM_LEDS, CRGB(0, 0, 0));
+    FastLED.show();
+    delay(20);
     return true;
   } else {
     return false;
